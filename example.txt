@@ -1,0 +1,4 @@
+fetch h https://api.foursquare.com/v3/places/search?categories=13065&limit=1
+fetch images https://api.foursquare.com/v3/places/{h.results[0].fsq_id}/photos
+foreach image images
+download {image.prefix}/original/{image.suffix} ./localpath/{image.id}.jpg
